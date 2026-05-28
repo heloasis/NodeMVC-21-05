@@ -1,0 +1,4 @@
+[
+  { "id": 1, "nome": "Fornecedor A", "cnpj": "12345678000100" },
+  { "id": 2, "nome": "Fornecedor B", "cnpj": "98765432000100" }
+]
