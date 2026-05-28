@@ -22,19 +22,13 @@ app.use(express.urlencoded({ extended: true }));
 ===================================================== */
 
 const categoriaRoutes = require("./routes/categoriaRoutes");
-
 const fornecedorRoutes = require("./routes/fornecedorRoutes");
-
 const clienteRoutes = require("./routes/clienteRoutes");
-
 const funcionarioRoutes = require("./routes/funcionarioRoutes");
 
 app.use("/categorias", categoriaRoutes);
-
 app.use("/fornecedores", fornecedorRoutes);
-
 app.use("/clientes", clienteRoutes);
-
 app.use("/funcionario", funcionarioRoutes);
 
 /* =====================================================
@@ -53,9 +47,10 @@ app.get("/", (req, res) => {
    SERVER
 ===================================================== */
 
-app.listen(3000, () => {
+const PORT = process.env.PORT || 3000;
 
-    console.log("Servidor rodando:");
-    console.log("http://localhost:3000");
+app.listen(PORT, () => {
+
+    console.log(`Servidor rodando na porta ${PORT}`);
 
 });
